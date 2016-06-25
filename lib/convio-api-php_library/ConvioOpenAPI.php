@@ -204,11 +204,9 @@ class ConvioOpenAPI
 	 * will be either a PHP object, a string of XML, or a string of JSON that is representative of the response
 	 * from the API.
 	 */
-	public function call($servletMethod, $params = NULL)
+	public function call($servlet, $servletMethod, $params = NULL)
 	{
-		$this->__servlet = array_shift((explode('_', $servletMethod)));
-
-		echo ($this->__servlet);
+		$this->__servlet = array_shift((explode('_', $servlet)));
 		$this->__method  = array_pop((explode('_', $servletMethod)));
 		if ($params !== NULL) $this->__methodParams = $params;
 		return $this->__makeCall();
