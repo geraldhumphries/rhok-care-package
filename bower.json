@@ -1,0 +1,9 @@
+{
+  "name": "rhok-care-package",
+  "version": "0.0.0",
+  "appPath": "src/webapp",
+  "dependencies": {
+    "dragula.js": "dragula#^3.7.1",
+    "bootstrap": "^3.3.6"
+  }
+}
