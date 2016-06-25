@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico?v=25446546"/>
+    <!--<link rel="shortcut icon" href="http://localhost:3000/favicon.ico?v=25446546"/>-->
     <link rel="stylesheet" href="resources/css/main.css">
     <link rel="stylesheet" href="bower_components/dragula.js/dist/dragula.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -17,9 +17,26 @@
 </head>
 <body>
 
+<div class="container">
+    <div class="well">
+        <div class="row">
+            <div class="col-sm-6">
+                <div id="drag" class="">
+                    <div class="draggable">TEST DRAG</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div id="drop">
+                    TEST DROP
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/dragula.js/dist/dragula.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/dragula.js/dist/dragula.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="resources/js/main.js"></script>
 </body>
 </html>
