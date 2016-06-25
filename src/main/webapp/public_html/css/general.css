@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
+	fontsize=14;
+}
+.caregifts {
+	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
+	fontsize=14;
+	color:orange;
+	
+}
+
+.additems {
+	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
+	fontsize:16;
+	color:white;
+	margin:2%;
+	border-top:2em;
+	
+}
+.additemsb {
+	background-color: orange;
+	height:4.5em;
+	padding:1%;
+}
+.yellowb {
+	background-color: yellow;
+	margin:2%;
+	/*margin-left:5%;*/
+	border:medium #000000;
+	padding:1%;
+	padding-top:2%;
+	border-radius: 15px;
+	
+}
+.outer {
+	border:thick #F00;
+	
+}
+.outer2 {
+	margin:7%;
+}
