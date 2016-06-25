@@ -1,8 +1,18 @@
-#packageItemsList{
+#wrapper {
 
 }
+@media screen and (min-width: 750px) {
+    #packageItemsList{
+        transform:translateY(50%);
+    }
+}
+
 
 #submitPackage{
-    width: 300px;
+    width: 250px;
     background-color: orangered;
 }
+
+/*.pkgcontainer img {*/
+    /*margin: auto;*/
+/*}*/
