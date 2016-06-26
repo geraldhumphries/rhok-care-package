@@ -23,10 +23,32 @@
                 handleRemoveProduct(event.target);
             }
         });
+
+
+// retrieve the element
+element = document.getElementById("careBoxx");
+
+// reset the transition by...
+element.addEventListener(addProduct, function(e) {
+  e.preventDefault;
+  
+  // -> removing the class
+  element.classList.remove("shakeit");
+  
+  // -> triggering reflow /* The actual magic */
+  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+  element.offsetWidth = element.offsetWidth;
+  
+  // -> and re-adding the class
+  element.classList.add("shakeit");
+}, false);
+
+
     }
     function cancelEvent (event) {
         event.preventDefault();
     }
+
     function addProduct (productData) {
         var productTable = document.querySelector('#packageItemsList tbody');
         var productRow = productTable.querySelector('tr[data-product-id="' + productData.productId + '"]');
@@ -45,6 +67,12 @@
             productRow.dataset.price = productData.price;
             productRow.dataset.quantity = 1;
         }
+
+        //animation upon adding item
+        element = document.getElementById("careBoxx");
+        element.classList.remove("shakeit");  
+        element.offsetWidth = element.offsetWidth;
+        element.classList.add("shakeit");
     }
     function handleRemoveProduct (targetElement) {
         var row = targetElement.parentNode;
