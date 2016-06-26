@@ -5,7 +5,13 @@ require_once(__dir__ . '/public_html/bower_components/simple_html_dom.php');
 class index {
 
 	public function __construct() {
-		return json_encode($this->parseHTML());
+		
+		if (!isset($_POST['action']))
+			$_POST['action'] = 'getProductList';
+
+		switch ($_POST['action']) {
+			case 'getProductList': return $this->parseProductHTML();
+		}
 	}
 
 	/**
@@ -38,7 +44,7 @@ class index {
 	 * Grabs content from convio ecommerce website and parse products out.
 	 * @return array
 	 */
-	protected function parseHTML() {
+	protected function parseProductHTML() {
 		$html = file_get_html('https://secure3.convio.net/careca/site/Ecommerce?VIEW_CATALOG=true&store_id=1461&NAME=&FOLDER=0');
 
 		$products = array();
@@ -68,7 +74,7 @@ class index {
 				$products[$product['product_id']] = $product;
 		}
 		
-		return $products;
+		return json_encode($products);
 	}
 	static function str_replace_first($from, $to, $subject)
 	{
