@@ -1,49 +1,50 @@
 @charset "utf-8";
 /* CSS Document */
 html {
-	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
-	font-size=14;
+	font-family:"Verdana,Tahoma, DejaVu Sans,sans-serif";
+	font-size: 14px;
 }
 .caregifts {
-	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
-	font-size=14;
+	font-family:"Verdana,Tahoma, DejaVu Sans,sans-serif";
+	font-size: 14px;
 	color:#db6b1f;
-	
 }
 
 .additems {
-	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
-	font-size:16;
+	font-family: "Verdana,Tahoma, DejaVu Sans,sans-serif";
+	font-size: 24px;
 	color:white;
-	margin:2%;
+	padding: 4px 14px;
 	border-top:2em;
 	
 }
 .additemsb {
 	background-color: #db6b1f;
-	height:4.5em;
-	padding:1%;
+	max-width: 800px;
+	margin: auto;
 }
 .yellowb {
 	background-color: #ffc700;
 	margin:2%;
-	/*margin-left:5%;*/
 	border:medium #000000;
-	padding:1%;
-	padding-top:2%;
+	padding: 10px 0px;
 	border-radius: 15px;
-	
+	width: 200px;
+	height: 200px;
 }
 .outer {
 	border:thick #F00;
-	
+	margin-right: 10px;
 }
 .outer2 {
-	margin:7%;
+	margin: 0px 10px;
 }
 .surround{
+	position: relative;
 }
-.top{
+.surround img.outer2{
+	width: 180px;
+	height: 150px;
 }
 .label {
 	color:#000;
@@ -53,28 +54,28 @@ html {
 	padding-right:1em;
 }
 .price {
-	padding-left:1em;
+	padding-right:1em;
 	color:#FFF;
 	float:left;
 	width:50%;
+	text-align: right;
 }
 .boxicon{
-	width:2em;
-	height:2em;
+	max-height:36px;
+	max-height:36px;
 }
 .bottombox{
-	
 	background-color:#ffc700;
-	width:20%;
+	width:50%;
+	position: absolute;
 	z-index:2;
-	position:absolute;
-	top:7em;
-	/*float:right;*/
-	left:7em;
 	display:flex;
+	bottom: 0px;
+	right: 0px;
+	border-radius: 5px;
+	padding: 2px 2px 0px 2px;
 }
 .addtocare {
-	font-size:0.6em;
+	font-size:0.7em;
 	float:right;
-	
 }

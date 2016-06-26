@@ -4,10 +4,17 @@
     }
 }
 
+#pkgcontainer img{
+    float: right;
+}
+
 #submitPackage{
-    width: 250px;
-    background-color: orangered;
+    width: 350px;
+    font-size: 24px;
+    background-color: #db6b1f;
     color: #fff;
+    padding: 10px;
+    margin: 20px auto;
 }
 
 #packageItemsList > p {
@@ -22,11 +29,35 @@
 }
 
 #packageItemsList table th{
-    background-color: orangered;
+    background-color: #db6b1f;
     color: #fff;
 }
 
 #packageItemsList table tfoot{
-    color: orangered;
+    color: #db6b1f;
     font-weight: bold;
+}
+
+.additems{
+    font-weight: bold;
+}
+
+.additems span{
+    float: right;
+}
+
+.middlegrid{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pkgitems{
+    margin: 0px 20px;
+}
+
+.itemsRow{
+    display: flex;
+    justify-content: space-around;
+
 }
