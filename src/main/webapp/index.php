@@ -2,6 +2,9 @@
 require_once(__dir__ . '/public_html/bower_components/convio-api-php_library/ConvioOpenAPI.php');
 require_once(__dir__ . '/public_html/bower_components/simple_html_dom.php');
 
+/**
+ * Simple parser (work around) for care.ca to fetch a product list from convio.
+ */
 class index {
 
 	public function __construct() {
@@ -17,6 +20,9 @@ class index {
 	/**
 	 * Convio API does not have eCommerce support
 	 * API Key and Authentication content has been removed for security.
+	 * 
+	 * @access protected
+	 * 
 	 * @return string
 	 */
 	protected function grabProducts() {
@@ -42,7 +48,10 @@ class index {
 
 	/**
 	 * Grabs content from convio ecommerce website and parse products out.
-	 * @return array
+	 * 
+	 * @access protected
+	 * 
+	 * @return string
 	 */
 	protected function parseProductHTML() {
 		$html = file_get_html('https://secure3.convio.net/careca/site/Ecommerce?VIEW_CATALOG=true&store_id=1461&NAME=&FOLDER=0');
@@ -73,9 +82,20 @@ class index {
 			if (isset($product['product_id']))
 				$products[$product['product_id']] = $product;
 		}
-		
+
 		return json_encode($products);
 	}
+
+	/** 
+	 * str_replace but only if it appears in the beginning of the string.
+	 * 
+	 * @access public
+	 *
+	 * @param string $from Original string content
+	 * @param string $to Replaced string content
+	 * @param string $subect String where the occurence to be replaced.
+	 * @return string
+	 */
 	static function str_replace_first($from, $to, $subject)
 	{
 	    $from = '/'.preg_quote($from, '/').'/';
