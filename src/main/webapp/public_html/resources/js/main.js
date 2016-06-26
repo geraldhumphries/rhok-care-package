@@ -24,26 +24,28 @@
             }
         });
 
+        // retrieve the element
+        element = document.getElementById("careBoxx");
 
-// retrieve the element
-element = document.getElementById("careBoxx");
-
-// reset the transition by...
-element.addEventListener(addProduct, function(e) {
-  e.preventDefault;
-  
-  // -> removing the class
-  element.classList.remove("shakeit");
-  
-  // -> triggering reflow /* The actual magic */
-  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-  element.offsetWidth = element.offsetWidth;
-  
-  // -> and re-adding the class
-  element.classList.add("shakeit");
-}, false);
+        // reset the transition by...
+        element.addEventListener(addProduct, function(e) {
+          e.preventDefault;
+          
+          // -> removing the class
+          element.classList.remove("shakeit");
+          
+          // -> triggering reflow /* The actual magic */
+          // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+          element.offsetWidth = element.offsetWidth;
+          
+          // -> and re-adding the class
+          element.classList.add("shakeit");
+        }, false);
 
 
+        $.getJSON('index.php', function (data) {
+            getProductList(data);
+        });
     }
     function cancelEvent (event) {
         event.preventDefault();
@@ -74,6 +76,53 @@ element.addEventListener(addProduct, function(e) {
         element.offsetWidth = element.offsetWidth;
         element.classList.add("shakeit");
     }
+    function getProductList (data) {
+        
+        var list = '';
+        var section = '';
+        let i=0;
+        for (var product in data) {
+            i++;
+
+            if (i == 2) {
+                list += '<div>' + section + '</div>';
+                section = '';
+                i = 0;
+            }
+
+            if (data.hasOwnProperty(product)) {
+                var p = data[product];
+               section += displayProduct(p['ShoppingTitle'], p['ShoppingPrice'], p['img']);
+            }   
+        }
+
+        list += '<div>' + section + '</div>';
+        document.getElementById('itemsRow').innerHTML = list;
+    }
+
+
+    function displayProduct(label, price, img) {
+        var display = 
+       ' <div class="outer">' +
+       '     <div class="product yellowb" draggable="true" data-product-id="2" data-price="' + price +'"' +
+       '           data-product-name="' + label + '" >' +
+       '         <div class="surround">' +
+       '             <div class="top">' +
+       '                 <p class="label">' + label + '</p>' +
+       '                 <p class="price">' + price + '</p>' +
+       '             </div>' +
+       '             <img src="' + img + '" class="outer2">' +
+       '             <div class="bottombox">' +
+       '                 <img src="images/box_icon.png" class="boxicon" >' +
+       '                 <p class="addtocare">Add to CARE Package </p>' +
+       '             </div>' +
+       '         </div>' +
+       '     </div>' +
+       ' </div>';
+
+       return display;
+    }
+
     function handleRemoveProduct (targetElement) {
         var row = targetElement.parentNode;
         row.parentNode.removeChild(row);
