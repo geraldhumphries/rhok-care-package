@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico?v=25446546"/>
+    <!--<link rel="shortcut icon" href="http://localhost:3000/favicon.ico?v=25446546"/>-->
     <link rel="stylesheet" href="resources/css/main.css">
     <link rel="stylesheet" href="bower_components/dragula.js/dist/dragula.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -18,97 +18,115 @@
 </head>
 <body>
 <div class="container">
-    <div name = "header">
+    <div name="header">
         <div class=row>
-            <div class="col-md-12"><img src="images/care_pkg_box_o.jpg" class="img-responsive center-block" alt="" /></div>        
+            <div class="col-md-12"><img src="images/care_pkg_box_o.jpg" class="img-responsive center-block" alt=""/>
+            </div>
         </div>
         <div class=row>
-            <div class="col-md-12"><img src="images/care_page_font_find.png" class="img-responsive center-block" alt="" style="width:50%"/></div>        
+            <div class="col-md-12"><img src="images/care_page_font_find.png" class="img-responsive center-block" alt=""
+                                        style="width:50%"/></div>
         </div>
     </div>
 
-    <div name = "sidebar" class="container-fluid">
-    	<div name="instructions">
+    <div name="sidebar" class="container-fluid">
+        <div name="instructions">
         </div>
         <div name="description">
         </div>
     </div>
     <div name="caregifts">
-    	<p class="caregifts"> CARE Gifts empower women and girls to lift themselves, their families and entire communities out of poverty</p>
+        <p class="caregifts"> CARE Gifts empower women and girls to lift themselves, their families and entire
+            communities out of poverty</p>
     </div>
     <div name="additems" class="additemsb">
-    <p class="additems"> Add Items to your CARE Package</p>
+        <p class="additems"> Add Items to your CARE Package</p>
     </div>
     <div name="middlegrid">
-    <div name="leftarrow">
-    	<img src="images/chevron_left.jpg"
-    </div>
-    <div name = "pkgitems" class="container-fluid">
-    	<div class="row">
-        	<div class="col-xs-3 col-md-3" class="outer"><div  class="yellowb"><div class="surround"><div class="top"><p class="label">Label</p><p class="price">$10</p></div><img src="images/beehive-2_360.jpg" width="90" height="90" class="outer2"><div class="bottombox"><p class="addtocare">Add </p><img src="images/box_icon.png" class="boxicon" ></div></div></div></div>
-            <div class="col-xs-3 col-md-3"><div class="yellowb" ><div class="surround"><div class="top"><p class="label">Label</p><p class="price">$10</p></div><img src="images/breacelet_360.jpg" width="90" height="90" class="outer2"><div class="bottombox"><p class="addtocare">Add</p><img src="images/box_icon.png" class="boxicon" ></div></div></div></div>
-            <div class="col-xs-3 col-md-3"><div class="yellowb"><div class="surround"><div class="top"><p class="label">Label</p><p class="price">$10</p></div><img src="images/breacelet_360.jpg" width="90" height="90" class="outer2"><div class="bottombox"><p class="addtocare">Add </p><img src="images/box_icon.png" class="boxicon" ></div></div></div></div>
+        <div name="leftarrow">
+            <img src="images/chevron_left.jpg"/>
+        </div>
+        <div id="pkgitems" class="container-fluid">
+            <div class="row">
+                <div class="col-xs-3 col-md-3" class="outer">
+                    <div class="product yellowb" draggable="true" data-product-id="1" data-price="100"
+                         data-product-name="test1"><img src="images/beehive-2_360.jpg" width="90" height="90"
+                                                        class="outer2"></div>
+                </div>
+                <div class="col-xs-3 col-md-3">
+                    <div class="product yellowb" draggable="true" data-product-id="2" data-price="100"
+                         data-product-name="test2"><img src="images/breacelet_360.jpg" width="90" height="90"
+                                                        class="outer2"></div>
+                </div>
+                <div class="col-xs-3 col-md-3">
+                    <div class="product yellowb" draggable="true" data-product-id="3" data-price="100"
+                         data-product-name="test3"><img src="images/breacelet_360.jpg" width="90" height="90"
+                                                        class="outer2"></div>
+                </div>
             </div>
             <div class="row">
-            <div class="col-xs-3 col-md-3"><div " class="yellowb"><div class="surround"><div class="top"><p class="label">Label</p><p class="price">$10</p></div><img src="images/goat_360.jpg" width="90" height="90" class="outer2"><div class="bottombox"><p class="addtocare">Add </p><img src="images/box_icon.png" class="boxicon" ></div></div></div></div>
-            <div class="col-xs-3 col-md-3"><div  class="yellowb"><div class="surround"><div class="top"><p class="label">Label</p><p class="price">$10</p></div><p class="addtocare">Add </p><img src="images/pigket.jpg" width="90" height="90" class="outer2"><div class="bottombox"><img src="images/box_icon.png" class="boxicon" >></div></div></div></div>
-            <div class="col-xs-3 col-md-3"><div  class="yellowb"><div class="surround"><div class="top"><p class="label">Label</p><p class="price">$10</p></div><img src="images/food_for_child_360.jpg" width="90" height="90" class="outer2"><div class="bottombox"><p class="addtocare">Add </p><img src="images/box_icon.png" class="boxicon" ></div></div></div></div>
-        </div>    
-    </div>
-    <div name="leftarrow">
-    	<img src="images/chevron_right_360.jpg"
-    </div>
-    </div>
-    <div class="pkgcontainer" class="row">
-        <div class="col-sm-6">
-            <img class="img-responsive center-block" src="images/10000144-empty-opened-white-cardboard-box-stock-photo-open__1__360.jpg">
+                <div class="col-xs-3 col-md-3">
+                    <div class="product yellowb" draggable="true" data-product-id="4" data-price="100"
+                         data-product-name="test4"><img src="images/goat_360.jpg" width="90" height="90" class="outer2">
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3">
+                    <div class="product yellowb" draggable="true" data-product-id="5" data-price="100"
+                         data-product-name="test5"><img src="images/pigket.jpg" width="90" height="90" class="outer2">
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3">
+                    <div class="product yellowb" draggable="true" data-product-id="6" data-price="100"
+                         data-product-name="test6"><img src="images/food_for_child_360.jpg" width="90" height="90"
+                                                        class="outer2"></div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-3" id="wrapper">
-            <div id="packageItemsList">
-                <p>What's in my CARE package</p>
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>ITEM</th>
-                        <th>PRICE</th>
-                        <th>REMOVE</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Item 1</td>
-                        <td>$000</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td>Item 1</td>
-                        <td>$000</td>
-                        <td>X</td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <td>TOTAL</td>
-                        <td>$000</td>
-                    </tr>
-                    </tfoot>
-                </table>
+        <div name="leftarrow">
+            <img src="images/chevron_right_360.jpg"/>
+        </div>
+        <div class="row dropzone pkgcontainer">
+            <div class="col-sm-6">
+                <img class="img-responsive center-block"
+                     src="images/10000144-empty-opened-white-cardboard-box-stock-photo-open__1__360.jpg">
+            </div>
+            <div class="col-sm-3" id="wrapper">
+                <div id="packageItemsList">
+                    <p>What's in my CARE package</p>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>ITEM</th>
+                            <th>PRICE</th>
+                            <th>QUANTITY</th>
+                            <th>REMOVE</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td>$000</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="center-block">
+                    <input class="btn" id="submitPackage" type="submit" value="Submit">
+                </div>
             </div>
         </div>
     </div>
-    <div class="row">
-    	<div class="col-sm-12">
-            <div class="center-block">
-                <input class="btn" id="submitPackage" type="submit" value="Submit">
-            </div>
-        </div>
-    </div>
-<div><!--endcontainer>
+</div>
 
-
-
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/dragula.js/dist/dragula.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/dragula.js/dist/dragula.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="resources/js/main.js"></script>
 </body>
 </html>
