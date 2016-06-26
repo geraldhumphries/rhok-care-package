@@ -1,13 +1,3 @@
-@media screen and (min-width: 750px) {
-    #packageItemsList{
-        transform:translateY(50%);
-    }
-}
-
-#pkgcontainer img{
-    float: right;
-}
-
 #submitPackage{
     width: 350px;
     font-size: 24px;
@@ -59,5 +49,8 @@
 .itemsRow{
     display: flex;
     justify-content: space-around;
+}
 
+.img-responsive.center {
+    margin: 0 auto;
 }
