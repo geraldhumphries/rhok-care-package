@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
+	font-size=14;
+}
+.caregifts {
+	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
+	font-size=14;
+	color:#db6b1f;
+	
+}
+
+.additems {
+	font:"Verdana,Tahoma, DejaVu Sans,sans-serif";`
+	font-size:16;
+	color:white;
+	margin:2%;
+	border-top:2em;
+	
+}
+.additemsb {
+	background-color: #db6b1f;
+	height:4.5em;
+	padding:1%;
+}
+.yellowb {
+	background-color: #ffc700;
+	margin:2%;
+	/*margin-left:5%;*/
+	border:medium #000000;
+	padding:1%;
+	padding-top:2%;
+	border-radius: 15px;
+	
+}
+.outer {
+	border:thick #F00;
+	
+}
+.outer2 {
+	margin:7%;
+}
+.surround{
+}
+.top{
+}
+.label {
+	color:#000;
+	float:left;
+	width:50%;
+	font-size:1em;
+	padding-right:1em;
+}
+.price {
+	padding-left:1em;
+	color:#FFF;
+	float:left;
+	width:50%;
+}
+.boxicon{
+	width:2em;
+	height:2em;
+}
+.bottombox{
+	
+	background-color:#ffc700;
+	width:20%;
+	z-index:2;
+	position:absolute;
+	top:7em;
+	/*float:right;*/
+	left:7em;
+	display:flex;
+}
+.addtocare {
+	font-size:0.6em;
+	float:right;
+	
+}
