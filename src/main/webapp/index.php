@@ -46,18 +46,15 @@ class index {
 		foreach($html->find('form') as $form) {
 			
 			$product = array();
-			foreach($form->find('input') as $input) {
+			foreach($form->find('input') as $input)
 				$product[$input->getAttribute('name')] = $input->getAttribute('value');
-			}
 
-			$product['img'] = array();
-			foreach ($form->find('img') as $img) {
-				$product['img'] = $img->getAttribute('src');
-			}
-			
-			foreach($form->find('span') as $span) {
+			foreach ($form->find('img') as $img)
+				$product['img'] = $this->str_replace_first('..', 
+				'https://secure3.convio.net/careca', $img->getAttribute('src'));
+
+			foreach($form->find('span') as $span)
 				$product[$span->getAttribute('class')] = $span->plaintext;
-			}
 
 			unset($product['Explicit']);
 			unset($product['ADD_TO_CART']);
@@ -70,8 +67,14 @@ class index {
 			if (isset($product['product_id']))
 				$products[$product['product_id']] = $product;
 		}
-
+		
 		return $products;
+	}
+	static function str_replace_first($from, $to, $subject)
+	{
+	    $from = '/'.preg_quote($from, '/').'/';
+
+	    return preg_replace($from, $to, $subject, 1);
 	}
 }
 
